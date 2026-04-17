@@ -1,0 +1,54 @@
+<mat-drawer-container class="container">
+
+  <mat-drawer mode="side" opened class="sidenav">
+    <div class="imagem">
+      <img src="assets/imagens/logo.png" alt="logo">
+    </div>
+    <hr class="linha">
+    <nav class="menu">
+      <a class="menu-item" routerLink="/dashboard" routerLinkActive="link-ativo">
+        <mat-icon>dashboard</mat-icon>
+        <span>Dashboard</span>
+      </a>
+      <a class="menu-item" routerLink="/saida-alunos" routerLinkActive="link-ativo">
+        <mat-icon>directions_walk</mat-icon>
+        <span>Saída de Alunos</span>
+      </a>
+      <a class="menu-item" routerLink="/turmas" routerLinkActive="link-ativo">
+        <mat-icon>school</mat-icon>
+        <span>Turmas</span>
+      </a>
+      <a class="menu-item" routerLink="/cadastrar-aluno" routerLinkActive="link-ativo">
+        <mat-icon>person_add</mat-icon>
+        <span>Cadastrar Aluno</span>
+      </a>
+      <a class="menu-item" routerLink="/relatorio" routerLinkActive="link-ativo">
+        <mat-icon>description</mat-icon>
+        <span>Relatório Diário</span>
+      </a>
+      <a class="menu-item" routerLink="/historico" routerLinkActive="link-ativo">
+        <mat-icon>history</mat-icon>
+        <span>Histórico</span>
+      </a>
+    </nav>
+
+    <div class="profile-area">
+      <div class="profile">
+        <div class="avatar">A</div>
+        <div class="profile-text">
+          <div class="name">Admin Escolar</div>
+          <div class="role">Portaria Principal</div>
+        </div>
+      </div>
+      <a class="logout" href="#">
+        <mat-icon>logout</mat-icon>
+        <span>Sair do sistema</span>
+      </a>
+    </div>
+  </mat-drawer>
+
+  <mat-drawer-content class="sidenav-content">
+    <router-outlet></router-outlet>
+    <ng-content></ng-content>
+  </mat-drawer-content>
+</mat-drawer-container>

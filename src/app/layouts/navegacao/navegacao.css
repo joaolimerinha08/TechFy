@@ -1,0 +1,139 @@
+/* Layout geral */
+.container {
+    width: 100%;
+    background-color: #020203;
+}
+
+.linha{
+    border: 1px solid rgba(15, 49, 161, 0.436);
+}
+
+/* Barra lateral */
+.sidenav {
+    width: 260px;
+    background-color: #020203;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Alinha do topo para baixo */
+    border-right: 1px solid rgba(15, 49, 161, 0.436);
+    box-shadow: inset -2px 0 20px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    position: fixed;
+    border-radius: 0;
+    max-width: 100%;
+}
+
+.sidenav-content {
+    width: calc(100% - 280px);
+    min-height: 100vh;
+    background-color: #020203;
+    color: #e9edf8;
+    padding: 24px;
+    overflow-y: auto;
+}
+
+.imagem {
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+}
+
+.imagem img { 
+    width: 200px; 
+    height: auto;
+    display: block;
+    mix-blend-mode: screen; /* Remove fundo preto se houver */
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0 0.75rem;
+    flex: 1; /* Faz o menu ocupar o espaço central disponível */
+    margin-top: 1rem;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    gap: 0.95rem;
+    color: #d7d9e3e0;
+    padding: 0.4rem 0.4rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.menu-item mat-icon {
+    font-size: 20px;
+}
+
+.menu-item:hover {
+    background-color: rgba(9, 18, 75, 0.532);
+}   
+
+.menu-item.link-ativo {
+    background-color: rgb(1, 95, 235); /* Uma cor azulada para destacar */
+    color: #ffffff;
+}
+
+.profile-area {
+    border-top: 1px solid rgba(15, 49, 161, 0.436);
+    padding: 1rem 1rem 1.2rem;
+    margin-top: 3rem; /* Removido margin grande que causava scroll */
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.95rem;
+}
+
+.avatar {
+    width: 43px;
+    height: 43px;
+    border-radius: 50%;
+    background-color: #1976d2;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    color: #ffffff;
+}
+
+.profile-text .name {
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 0.95rem;
+}
+
+.profile-text .role {
+    color: #a5b2ce;
+    font-size: 0.8rem;
+}
+
+.logout {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.7rem;
+    color: #ff3f44;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 0.7rem 0.75rem;
+    border-radius: 8px;
+}
+
+.logout mat-icon {
+    color: #ff3f44;
+}
+
+.logout:hover {
+    background-color: rgba(255, 63, 68, 0.12);
+    padding-right: 80px;
+}
