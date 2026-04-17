@@ -1,0 +1,167 @@
+/* ======================================================================== */
+/* Page Container                                                              */
+/* ======================================================================== */
+html,
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    background: #f3f6fc;
+    color: #1e264d;
+}
+
+.page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px 16px 32px;
+    max-width: 100%;
+    margin: 0 auto;
+
+    /* ======================================================================== */
+    /* Header Container                                                           */
+    /* ======================================================================== */
+    & .header-container {
+        width: 100%;
+        max-width: 620px;
+        margin-bottom: 24px;
+
+        & .titulo {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #121a40;
+            margin: 0 0 8px;
+            text-align: left;
+        }
+
+        & .subtitulo {
+            font-size: 1rem;
+            margin: 0;
+            color: #66709f;
+            font-weight: 400;
+            text-align: left;
+        }
+    }
+
+    /* ======================================================================== */
+    /* Main Container                                                              */
+    /* ======================================================================== */
+    & .main-container {
+        width: 100%;
+        max-width: 620px;
+        margin: 0 auto;
+
+        /* ======================================================================== */
+        /* Form Container                                                              */
+        /* ======================================================================== */
+        & .form-container {
+            width: 100%;
+            max-width: 620px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 28px;
+            box-shadow: 0 24px 60px rgba(34, 46, 98, 0.08);
+            border: 1px solid rgba(102, 112, 159, 0.16);
+            padding: 28px 26px 24px;
+
+            & form {
+                display: grid;
+                gap: 18px;
+
+                & label {
+                    display: grid;
+                    gap: 8px;
+                    font-size: 0.95rem;
+                    color: #3b4666;
+                }
+
+                & input,
+                & textarea,
+                & select {
+                    width: 100%;
+                    min-height: 46px;
+                    border: 1px solid #dfe4f2;
+                    border-radius: 16px;
+                    background: #f7f9ff;
+                    padding: 12px 14px;
+                    color: #19203d;
+                    font-size: 0.96rem;
+                    outline: none;
+                    box-sizing: border-box;
+                }
+
+                & textarea {
+                    min-height: 108px;
+                    resize: vertical;
+                }
+
+                & input:focus,
+                & textarea:focus,
+                & select:focus {
+                    border-color: #5f7bff;
+                    box-shadow: 0 0 0 4px rgba(95, 123, 255, 0.12);
+                }
+
+                & hr {
+                    border: 0;
+                    border-top: 1px solid #e6ebf6;
+                    margin: 0;
+                }
+
+                & > .subtitulo {
+                    margin-top: 12px;
+                    margin-bottom: 8px;
+                    color: #2d3864;
+                    font-size: 1rem;
+                    font-weight: 600;
+                }
+
+                & .btn-submit {
+                    align-self: flex-end;
+                    width: 190px;
+                    cursor: pointer;
+                    border: none;
+                    border-radius: 16px;
+                    background: #2045ff;
+                    color: #ffffff;
+                    font-size: 1rem;
+                    font-weight: 600;
+                    padding: 14px 24px;
+                    transition: background 0.2s ease;
+
+                    &:hover {
+                        background: #163cd6;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/* ======================================================================== */
+/* Responsive Container                                                       */
+/* ======================================================================== */
+@media (max-width: 720px) {
+    .page-container {
+        padding: 16px 12px 20px;
+
+        & .header-container {
+            margin-bottom: 20px;
+        }
+
+        & .main-container .form-container {
+            padding: 20px 18px 18px;
+            border-radius: 22px;
+
+            & form {
+                gap: 16px;
+
+                & .btn-submit {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

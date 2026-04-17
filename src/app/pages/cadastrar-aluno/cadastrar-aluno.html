@@ -1,12 +1,74 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastrar Aluno</title>
     <link rel="stylesheet" href="cadastrar-aluno.css">
 </head>
+
 <body>
-    <h1>Cadastrar Aluno</h1>
+    <div class="page-container">
+        <header class="header-container">
+            <h1 class="titulo">Cadastrar Aluno</h1>
+            <h3 class="subtitulo">Preencha os dados do aluno</h3>
+        </header>
+        <main class="main-container">
+            <section class="form-container">
+            <form>
+                <label for="nome">Nome Completo do Aluno:
+                    <input type="text" id="nome" name="nome" required>
+                </label>
+
+                <label for="turma">Turma:
+                    <input type="text" id="turma" name="turma" required>
+                </label>
+
+                <label for="dataNascimento">Data de Nascimento:
+                <input type="date" id="dataNascimento" name="dataNascimento" required>
+                </label>
+
+                <label for="cpf">CPF:
+                <input type="text" id="cpf" name="cpf" required>
+                </label>
+
+                <label for="rg">RG:
+                <input type="text" id="rg" name="rg" required>
+                </label>
+
+                <label for="certidaoNascimento">Certidão de Nascimento:
+                <input type="text" id="certidaoNascimento" name="certidaoNascimento" required>
+                </label>
+
+                <hr>
+
+                <h3 class="subtitulo">Dados do Responsável</h3>
+                <label for="nomeResponsavel">Nome Completo do Responsável:
+                    <input type="text" id="nomeResponsavel" name="nomeResponsavel" required>
+                </label>
+
+                <label for="telefone">Telefone de Contato:
+                    <input type="tel" id="telefone" name="telefone" required>
+                </label>
+
+                <label for="emailResponsavel">Email do Responsável:
+                    <input type="email" id="emailResponsavel" name="emailResponsavel" required>
+                </label>
+
+                <label for="endereco">Endereço Completo:
+                    <input type="text" id="endereco" name="endereco" required>
+                </label>
+
+                <label for="observacoes">Tranporte Escolar (Opcional)
+                    <textarea id="observacoes" name="observacoes"></textarea>
+                </label>
+
+                <button type="submit" class="btn-submit">Cadastrar</button>
+            </form>
+        </section>
+        </main>
+    </div>
 </body>
+
 </html>
