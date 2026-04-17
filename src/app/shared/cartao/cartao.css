@@ -1,13 +1,41 @@
 :host {
-    background-color:  #0B1A2B;
+    position: relative;
+    background-color: #0B1A2B;
     color: white;
     display: block;
-    padding: 10px;
+    padding: 24px;
     width: 180px;
     margin-top: 1rem;
-    border-radius: 10px;
-    border: 1px solid rgba(0, 81, 255, 0.5);
+    border-radius: 15px;
+    border: 1px solid rgba(0, 81, 255, 0.32);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+    overflow: hidden;
+}
+
+.cartao-icone {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 44px;
+    height: 44px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
     justify-content: center;
-    justify-items: center;
-    
-}   
+    background-color: rgba(81, 126, 255, 0.18);
+    margin-top: 10px;
+}
+
+.cartao-icone mat-icon {
+    font-size: 22px;
+    color: #5EA8FF;
+}
+
+:host ::ng-deep span {
+    display: block;
+    margin-top: 1rem;
+    color: #8fa2c4;
+    font-size: 0.95rem;
+}
+
+   
