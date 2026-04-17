@@ -1,11 +1,35 @@
 <div class="comeco">
-    <app-botao-confirmar texto="Criar nova turma" icon="add"></app-botao-confirmar>
-    <h1>Visão Geral</h1>
-    <p>Resumo das atividades do dia na portaria.</p>
+    <header class="cabecalho">
+        <div class="cabecalho-textos">
+            <h1>Visão Geral</h1>
+            <p>Resumo das atividades do dia na portaria.</p>
+        </div>
+        <div class="cabecalho-acoes">
+            <app-botao-confirmar texto="Relatório Diário" icon="add"></app-botao-confirmar>
+            <app-botao-confirmar texto="Registrar Saída Avulsa" icon="add"></app-botao-confirmar>
+        </div>
+    </header>
 </div>
 
-<app-cartao>
-    <h1>Meu cartão</h1>
-    <p>Esse é meu cartão</p>
-    
-</app-cartao>
+<div class="cartoes">
+    <app-cartao icon="Group">
+        <h3 class="titulo">Alunos Presentes</h3>
+        <p class="numeros">120</p>
+        <span>Estável</span>
+    </app-cartao>
+    <app-cartao icon="Schedule">
+        <h3 class="titulo">Saídas Pendentes</h3>
+        <p class="numeros">14</p>
+        <span>+3 na última hora</span>
+    </app-cartao>
+    <app-cartao icon="Check Circle">
+        <h3 class="titulo">Saídas Concluídas</h3>
+        <p class="numeros">128</p>
+        <span>Hoje</span>
+    </app-cartao>
+    <app-cartao icon="Warning">
+        <h3 class="titulo">Ocorrências</h3>
+        <p class="numeros">0</p>
+        <span>Requer atenção</span>
+    </app-cartao>
+</div>
