@@ -1,0 +1,93 @@
+/* Configurações */
+body {
+  background-color: #000; /* Fundo escuro */
+  color: #fff;
+  font-family: sans-serif;
+  margin: 40px;
+}
+
+/* Cabeçalho */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.header h1 { margin: 0; font-size: 24px; color: #ffffff; } /* Cor escura do título */
+.header p { margin: 5px 0; color: #ffffff; }
+
+.btn-export {
+  background: white;
+  border: 1px solid #ddd;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Card Branco */
+.card {
+  background: white;
+  border-radius: 12px;
+  color: #333;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Filtros */
+.filters {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.search-input {
+  width: 60%;
+  padding: 10px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background: #fdfdfd;
+}
+
+.btn-outline {
+  background: white;
+  border: 1px solid #e0e0e0;
+  padding: 8px 12px;
+  border-radius: 8px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+/* Tabela */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.table th {
+  color: #888;
+  font-size: 12px;
+  padding: 15px 10px;
+  border-bottom: 1px solid #eee;
+  text-transform: uppercase;
+}
+
+.table td {
+  padding: 15px 10px;
+  border-bottom: 1px solid #f5f5f5;
+  font-size: 14px;
+}
+
+/* Detalhes de estilo */
+.subtitle { color: #888; font-size: 12px; }
+.text-muted { color: #999; }
+
+.badge {
+  background: #f0f4f8;
+  color: #6a6363;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 13px;
+}
