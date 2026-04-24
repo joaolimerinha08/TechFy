@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+
+:root {
+  --background-color: #f3f6fc;
+  --text-color: #1e264d;
+  --title-color: #121a40;
+  --subtitle-color: #66709f;
+  --card-background: #ffffff;
+  --border-color: rgba(102, 112, 159, 0.16);
+  --label-color: #3b4666;
+  --input-background: #f7f9ff;
+  --input-color: #19203d;
+  --focus-border-color: #5f7bff;
+  --focus-shadow: rgba(95, 123, 255, 0.12);
+  --hr-color: #e6ebf6;
+  --form-subtitle-color: #2d3864;
+  --primary-color: #2045ff;
+  --primary-hover: #163cd6;
+  --white: #ffffff;
+  --font-family: 'Inter', 'Segoe UI', sans-serif;
+}

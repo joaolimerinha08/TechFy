@@ -6,9 +6,9 @@ body {
     margin: 0;
     padding: 0;
     min-height: 100%;
-    font-family: 'Inter', 'Segoe UI', sans-serif;
-    background: #f3f6fc;
-    color: #1e264d;
+    font-family: var(--font-family);
+    background: var(--background-color);
+    color: var(--text-color);
 }
 
 .page-container {
@@ -30,7 +30,7 @@ body {
         & .titulo {
             font-size: 2rem;
             font-weight: 700;
-            color: #121a40;
+            color: var(--title-color);
             margin: 0 0 8px;
             text-align: left;
         }
@@ -38,7 +38,7 @@ body {
         & .subtitulo {
             font-size: 1rem;
             margin: 0;
-            color: #66709f;
+            color: var(--subtitle-color);
             font-weight: 400;
             text-align: left;
         }
@@ -59,10 +59,10 @@ body {
             width: 100%;
             max-width: 620px;
             margin: 0 auto;
-            background: #ffffff;
+            background: var(--card-background);
             border-radius: 28px;
             box-shadow: 0 24px 60px rgba(34, 46, 98, 0.08);
-            border: 1px solid rgba(102, 112, 159, 0.16);
+            border: 1px solid var(--border-color);
             padding: 28px 26px 24px;
 
             & form {
@@ -73,7 +73,7 @@ body {
                     display: grid;
                     gap: 8px;
                     font-size: 0.95rem;
-                    color: #3b4666;
+                    color: var(--label-color);
                 }
 
                 & input,
@@ -83,9 +83,9 @@ body {
                     min-height: 46px;
                     border: 1px solid #dfe4f2;
                     border-radius: 16px;
-                    background: #f7f9ff;
+                    background: var(--input-background);
                     padding: 12px 14px;
-                    color: #19203d;
+                    color: var(--input-color);
                     font-size: 0.96rem;
                     outline: none;
                     box-sizing: border-box;
@@ -99,20 +99,20 @@ body {
                 & input:focus,
                 & textarea:focus,
                 & select:focus {
-                    border-color: #5f7bff;
-                    box-shadow: 0 0 0 4px rgba(95, 123, 255, 0.12);
+                    border-color: var(--focus-border-color);
+                    box-shadow: 0 0 0 4px var(--focus-shadow);
                 }
 
                 & hr {
                     border: 0;
-                    border-top: 1px solid #e6ebf6;
+                    border-top: 1px solid var(--hr-color);
                     margin: 0;
                 }
 
                 & > .subtitulo {
                     margin-top: 12px;
                     margin-bottom: 8px;
-                    color: #2d3864;
+                    color: var(--form-subtitle-color);
                     font-size: 1rem;
                     font-weight: 600;
                 }
@@ -123,15 +123,15 @@ body {
                     cursor: pointer;
                     border: none;
                     border-radius: 16px;
-                    background: #2045ff;
-                    color: #ffffff;
+                    background: var(--primary-color);
+                    color: var(--white);
                     font-size: 1rem;
                     font-weight: 600;
                     padding: 14px 24px;
                     transition: background 0.2s ease;
 
                     &:hover {
-                        background: #163cd6;
+                        background: var(--primary-hover);
                     }
                 }
             }
