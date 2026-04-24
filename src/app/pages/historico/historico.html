@@ -1,43 +1,54 @@
 <div class="container">
-  <header class="header">
-    <div class="title-group">
+  <header class="topo">
+    <div class="texto-topo">
       <h1>Histórico de Saídas</h1>
       <p>Acompanhamento e auditoria de liberações passadas.</p>
     </div>
-    <button class="btn-export">Exportar CSV</button>
+    <button mat-flat-button color="primary">Exportar CSV</button>
   </header>
 
-  <main class="card">
-    <div class="filters">
-      <input type="text" placeholder="Buscar aluno, turma..." class="search-input">
-      <div class="filter-buttons">
-        <button class="btn-outline">Período</button>
-        <button class="btn-outline">Filtros</button>
+  <div class="cartao-principal">
+    
+    <div class="barra-ferramentas">
+      <mat-form-field appearance="outline" class="campo-busca">
+        <mat-label>Buscar aluno, turma...</mat-label>
+        <input matInput>
+        <mat-icon matSuffix>search</mat-icon>
+      </mat-form-field>
+
+      <div class="botoes-extras">
+        <button mat-stroked-button>Período</button>
+        <button mat-stroked-button>Filtros</button>
       </div>
     </div>
 
-    <table class="table">
+    <table class="tabela">
       <thead>
         <tr>
           <th>DATA</th>
           <th>ALUNO / TURMA</th>
-          <th>HORÁRIO SAÍDA</th>
-          <th>LIBERADO POR / PARA</th>
-          <th>REGISTRADO POR</th>
+          <th>HORÁRIO</th>
+          <th>LIBERADO PARA</th>
+          <th>REGISTRO</th>
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>13/03/2026</td>
-          <td>
-            <strong>Ana Beatriz Gomes</strong><br>
-            <span class="subtitle">5º Ano A</span>
-          </td>
-          <td>12:05</td>
-          <td><span class="badge">Marta Gomes (Mãe)</span></td>
-          <td class="text-muted">Portaria 1</td>
-        </tr>
+        @for (item of saidas; track item.aluno) {
+          <tr>
+            <td>{{ item.data }}</td>
+            <td>
+              <span class="nome-aluno">{{ item.aluno }}</span><br>
+              <span class="turma-aluno">{{ item.turma }}</span>
+            </td>
+            <td>{{ item.horario }}</td>
+            <td>
+              <span class="etiqueta-azul">{{ item.liberadoPara }}</span>
+            </td>
+            <td class="texto-cinza">{{ item.local }}</td>
+          </tr>
+        }
       </tbody>
     </table>
-  </main>
+
+  </div>
 </div>
