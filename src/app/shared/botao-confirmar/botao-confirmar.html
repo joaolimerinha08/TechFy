@@ -1,4 +1,4 @@
-<button matFab extended class = "botao">
-        <mat-icon>{{icon}}</mat-icon>
-        {{texto}}
-</button>
+<button mat-flat-button class="botao {{ variant }}" routerLink="/saida-alunos">
+    <mat-icon *ngIf="icon">{{ icon }}</mat-icon>
+    {{ texto }}
+</button>       
