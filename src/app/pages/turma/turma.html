@@ -1,29 +1,40 @@
 <div class="page">
 
   <div *ngIf="!turmaSelecionada">
-    <h1>Turmas</h1>
+    <div class="header-section">
+      <h1 class="page-title">Turmas (Ensino fundamental I)</h1>
+      <p class="page-subtitle">Selecione uma turma para visualizar os alunos e o status de saída.</p>
+    </div>
 
     <div class="grid">
-      <div class="card" *ngFor="let turma of turmas" (click)="abrirTurma(turma)">
+      <div class="card card-turma" *ngFor="let turma of turmas" (click)="abrirTurma(turma)">
+        <div class="icon-box-large">
+          <span class="icon-grad">🎓</span>
+        </div>
         <h2>{{ turma.nome }}</h2>
-        <p>{{ turma.totalAlunos }} alunos</p>
+        <p class="aluno-count">{{ turma.totalAlunos }} alunos</p>
       </div>
     </div>
   </div>
 
   <div *ngIf="turmaSelecionada">
-
     <button class="btn-voltar" (click)="voltar()">← Voltar</button>
-
-    <h1>{{ turmaSelecionada.nome }}</h1>
+    <h1 class="page-title">{{ turmaSelecionada.nome }}</h1>
 
     <div class="grid">
-      <div class="card" *ngFor="let aluno of alunosDaTurma()">
+      <div class="card card-aluno" *ngFor="let aluno of alunosDaTurma()">
         <img [src]="aluno.foto" class="foto">
-        <p>{{ aluno.nome }}</p>
+        
+        <div class="aluno-info">
+          <h3>{{ aluno.nome }}</h3>
+          <p class="responsavel-text">
+            Responsável: {{ aluno.nome.includes('Marcos') ? 'Bruno' : (aluno.nome.includes('Maria') ? 'Julia' : 'Responsável') }}
+          </p>
+        </div>
+
+        <button class="btn-acao">Registrar Saída</button>
       </div>
     </div>
-
   </div>
 
 </div>
