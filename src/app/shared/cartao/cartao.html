@@ -1,4 +1,4 @@
-<div class="cartao-icone" *ngIf="icon">
+<div class="cartao-icone" *ngIf="icon" [ngClass]="iconClass">
   <mat-icon>{{ icon.toLowerCase() }}</mat-icon>
 </div>
 <ng-content></ng-content>

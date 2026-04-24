@@ -22,13 +22,43 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba(81, 126, 255, 0.18);
     margin-top: 10px;
+}
+
+.cartao-icone.group {
+    background-color: rgba(58, 101, 255, 0.18);
+}
+
+.cartao-icone.schedule {
+    background-color: rgba(219, 147, 18, 0.18);
+}
+
+.cartao-icone.check-circle {
+    background-color: rgba(5, 228, 136, 0.18);
+}
+
+.cartao-icone.warning {
+    background-color: rgba(231, 76, 60, 0.18);
 }
 
 .cartao-icone mat-icon {
     font-size: 22px;
+}
+
+.cartao-icone.group mat-icon {
     color: #5EA8FF;
+}
+
+.cartao-icone.schedule mat-icon {
+    color: #F9A825;
+}
+
+.cartao-icone.check-circle mat-icon {
+    color: #4CAF50;
+}
+
+.cartao-icone.warning mat-icon {
+    color: #EF5350;
 }
 
 :host ::ng-deep span {
