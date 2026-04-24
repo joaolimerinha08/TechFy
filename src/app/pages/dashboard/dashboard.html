@@ -5,8 +5,8 @@
             <p>Resumo das atividades do dia na portaria.</p>
         </div>
         <div class="cabecalho-acoes">
-            <app-botao-confirmar texto="Relatório Diário" icon="add"></app-botao-confirmar>
-            <app-botao-confirmar texto="Registrar Saída Avulsa" icon="add"></app-botao-confirmar>
+            <app-botao-cancelar texto="Relatório Diário"></app-botao-cancelar>
+            <app-botao-confirmar texto="Registrar Saída Avulsa" variant="registrar"></app-botao-confirmar>
         </div>
     </header>
 </div>
@@ -33,3 +33,48 @@
         <span>Requer atenção</span>
     </app-cartao>
 </div>
+
+<section class="ultimas-movimentacoes">
+    <div class="secao-cabecalho">
+        <div>
+            <h2>Últimas Movimentações</h2>
+        </div>
+        <a class="secao-link" routerLink="/historico">
+            Ver histórico
+            <span>→</span>
+        </a>
+    </div>
+
+    <div class="secao-card">
+        <table class="movimentacoes-tabela">
+            <thead>
+                <tr>
+                    <th>Aluno</th>
+                    <th>Turma</th>
+                    <th>Horário</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>João Pedro Silva</td>
+                    <td>6º Ano B</td>
+                    <td>12:30</td>
+                    <td><span class="status status-liberado">Liberado</span></td>
+                </tr>
+                <tr>
+                    <td>Maria Clara Santos</td>
+                    <td>9º Ano A</td>
+                    <td>12:28</td>
+                    <td><span class="status status-liberado">Liberado</span></td>
+                </tr>
+                <tr>
+                    <td>Lucas Oliveira</td>
+                    <td>1º Ano Médio</td>
+                    <td>12:15</td>
+                    <td><span class="status status-aguardando">Aguardando Responsável</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>

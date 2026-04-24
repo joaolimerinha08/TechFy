@@ -1,6 +1,28 @@
-.botao{
-    width: 174px;
-    background-color: rgb(0, 119, 255);
+.botao {
+    width: auto;
+    min-width: 140px;
+    padding: 0 18px;
+    height: 36px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background-color: rgb(8, 123, 255);
     color: white;
     margin-left: 0;
+    border-radius: 7px;
+    font-size: 0.95rem;
+    line-height: 1;
+}
+
+.botao.registrar {
+    background-color: #1d72ff;
+}
+
+.botao.registrar:hover {
+    background-color: #175dd8;
+}
+
+.botao mat-icon {
+    font-size: 18px;
 }
