@@ -1,0 +1,40 @@
+.page {
+  color: white;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.card {
+  background: #0f172a;
+  border-radius: 16px;
+  padding: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+  border: 1px solid #1f2a44;
+  text-align: center;
+}
+
+.card:hover {
+  border-color: #3b82f6;
+  transform: translateY(-5px);
+}
+
+.foto {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+
+.btn-voltar {
+  background: #1d4ed8;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-bottom: 15px;
+}

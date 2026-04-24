@@ -1,1 +1,29 @@
-<p>turma works!</p>
+<div class="page">
+
+  <div *ngIf="!turmaSelecionada">
+    <h1>Turmas</h1>
+
+    <div class="grid">
+      <div class="card" *ngFor="let turma of turmas" (click)="abrirTurma(turma)">
+        <h2>{{ turma.nome }}</h2>
+        <p>{{ turma.totalAlunos }} alunos</p>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="turmaSelecionada">
+
+    <button class="btn-voltar" (click)="voltar()">← Voltar</button>
+
+    <h1>{{ turmaSelecionada.nome }}</h1>
+
+    <div class="grid">
+      <div class="card" *ngFor="let aluno of alunosDaTurma()">
+        <img [src]="aluno.foto" class="foto">
+        <p>{{ aluno.nome }}</p>
+      </div>
+    </div>
+
+  </div>
+
+</div>

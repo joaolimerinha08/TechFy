@@ -1,12 +1,11 @@
-import { Turma } from "../../pages/turma/turma";
-
+import { Turmas } from "../../pages/turma/turma";
 export interface Aluno {
     id: number,
     matricula: string,
     nome: string,
     dataNascimento: Date,
     foto: string,
-    turma: Turma,
+    turma: Turmas,
     ativo: boolean
 
 }
